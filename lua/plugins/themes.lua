@@ -1,5 +1,7 @@
 return {
-  { "EdenEast/nightfox.nvim" },
+  { "EdenEast/nightfox.nvim", opts = {
+    transparent = true,
+  } },
   { "glepnir/zephyr-nvim" },
   { "glepnir/oceanic-material" },
   { "glepnir/dashboard-nvim" },
@@ -10,10 +12,45 @@ return {
   { "sainnhe/edge" },
   { "sainnhe/everforest" },
   {
+    "lunarvim/darkplus.nvim",
+    opts = {
+      darkplus_style = "dark",
+      transparent_mode = true,
+    },
+  },
+  {
+    "ellisonleao/gruvbox.nvim",
+
+    lazy = false,
+    opts = {
+      undercurl = true,
+      underline = true,
+      bold = true,
+      italic = {
+        strings = true,
+        comments = true,
+        operators = false,
+        folds = true,
+      },
+      strikethrough = true,
+      invert_selection = false,
+      invert_signs = false,
+      invert_tabline = false,
+      invert_intend_guides = false,
+      inverse = true, -- invert background for search, diffs, statuslines and errors
+      contrast = "", -- can be "hard", "soft" or empty string
+      palette_overrides = {},
+      overrides = {},
+      dim_inactive = false,
+      transparent_mode = true,
+    },
+  },
+  {
     "catppuccin/nvim",
-    lazy = true,
+    lazy = false,
     name = "catppuccin",
     opts = {
+      transparent_background = true,
       integrations = {
         alpha = true,
         cmp = true,
@@ -44,5 +81,9 @@ return {
         which_key = true,
       },
     },
+  },
+  {
+    "dracula/vim",
+    name = "dracula",
   },
 }
