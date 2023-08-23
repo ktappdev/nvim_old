@@ -13,9 +13,9 @@ vim.keymap.set(
 )
 
 -- write file with localleader + w
-keymap("n", "<localleader>w", ":w<cr>", { noremap = true, silent = true, desc = "Write file" })
+keymap("n", "<localleader>w", ":wa<cr>", { noremap = true, silent = true, desc = "Write file" })
 -- quit with localleader + q
-keymap("n", "<localleader>q", ":qa<cr>", { noremap = true, silent = true, desc = "Quit all" })
+keymap("n", "<localleader>q", ":q<cr>", { noremap = true, silent = true, desc = "Quit all" })
 -- close buffer with localleader + x
 keymap("n", "<localleader>x", ":bd<cr>", { noremap = true, silent = true, desc = "Close Buffer" })
 --localleader + b for bufferlinepick

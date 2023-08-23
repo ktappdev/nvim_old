@@ -1,5 +1,5 @@
 return {
-  { "EdenEast/nightfox.nvim", opts = {
+  { "EdenEast/nightfox.nvim", transparent = true, opts = {
     transparent = true,
   } },
   { "glepnir/zephyr-nvim" },
