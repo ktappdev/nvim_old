@@ -22,6 +22,8 @@ keymap("n", "<localleader>x", ":bd<cr>", { noremap = true, silent = true, desc =
 keymap("n", "<localleader>b", ":BufferLinePick<cr>", opts)
 -- save file with <C-s>
 keymap("n", "<C-s>", ":w<cr>", opts)
+-- open :Explorer with <localleader-e>
+keymap("n", "<localleader>e", ":Explore<cr>", opts)
 -- disable arroe keys
 keymap("n", "<up>", "", opts)
 keymap("n", "<down>", "", opts)
