@@ -1,10 +1,12 @@
 return {
   {
-    "jackMort/ChatGPT.nvim",
+
+    "dreamsofcode-io/ChatGPT.nvim",
     event = "VeryLazy",
     config = function()
+      local home = "/path/to/your/home/directory"
       require("chatgpt").setup({
-        -- api_key_cmd = "echo ''",
+        async_api_key_cmd = "pass show openai",
       })
     end,
     dependencies = {

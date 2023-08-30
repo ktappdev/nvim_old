@@ -31,3 +31,21 @@ keymap("n", "<left>", "", opts)
 keymap("n", "<right>", "", opts)
 -- highlight lines then move them up or down with  or K or J :move '< or '> or :move '<-1 or '>+1
 -- Resize window using <ctrl> arrow keys
+keymap("n", "<C-Up>", ":resize -2<cr>", opts)
+keymap("n", "<C-Down>", ":resize +2<cr>", opts)
+keymap("n", "<C-Left>", ":vertical resize -2<cr>", opts)
+keymap("n", "<C-Right>", ":vertical resize +2<cr>", opts)
+-- keymaps for ChatGPT plugin
+-- map key for :ChatGPT add proper description
+keymap("n", "<localleader>gg", ":ChatGPT<cr>", opts)
+-- map for :ChatGPTCompleteCode
+keymap("n", "<localleader>gc", ":ChatGPTCompleteCode<cr>", opts)
+-- map for :ChatGPTEditWithInstructions
+keymap("n", "<localleader>gi", ":ChatGPTEditWithInstructions<cr>", opts)
+-- map for :ChatGPTRun use two keys like local leader g and r
+keymap("n", "<localleader>gt", ":ChatGPTRun add_tests<cr>", opts)
+keymap("n", "<localleader>gc", ":ChatGPTRun complete_code<cr>", opts)
+keymap("n", "<localleader>ge", ":ChatGPTRun explain_code<cr>", opts)
+keymap("n", "<localleader>gf", ":ChatGPTRun fix_bugs<cr>", opts)
+keymap("n", "<localleader>go", ":ChatGPTRun optimize_code<cr>", opts)
+keymap("n", "<localleader>gs", ":ChatGPTRun summarize<cr>", opts)

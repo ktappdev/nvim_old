@@ -21,7 +21,6 @@ return {
   {
     "ellisonleao/gruvbox.nvim",
 
-    lazy = false,
     opts = {
       undercurl = true,
       underline = true,
@@ -47,7 +46,6 @@ return {
   },
   {
     "catppuccin/nvim",
-    lazy = false,
     name = "catppuccin",
     opts = {
       transparent_background = true,
@@ -88,12 +86,11 @@ return {
   },
   {
     "folke/tokyonight.nvim",
-    lazy = false,
     name = "tokyonight",
     opts = {
       style = "night",
       transparent = true,
     },
   },
-  { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
+  { "bluz71/vim-nightfly-colors", name = "nightfly", priority = 1000 },
 }
