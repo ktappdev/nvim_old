@@ -11,7 +11,8 @@ vim.keymap.set(
   require("telescope.builtin").resume,
   { noremap = true, silent = true, desc = "Last Telescope" }
 )
-
+-- normal mode 'jj' to escape
+keymap("i", "jj", "<esc>", opts)
 -- write file with localleader + w
 keymap("n", "<localleader>w", ":wa<cr>", { noremap = true, silent = true, desc = "Write file" })
 -- quit with localleader + q
@@ -49,3 +50,5 @@ keymap("n", "<localleader>ge", ":ChatGPTRun explain_code<cr>", opts)
 keymap("n", "<localleader>gf", ":ChatGPTRun fix_bugs<cr>", opts)
 keymap("n", "<localleader>go", ":ChatGPTRun optimize_code<cr>", opts)
 keymap("n", "<localleader>gs", ":ChatGPTRun summarize<cr>", opts)
+keymap("n", "<leader>v", ":lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
+keymap("n", "<leader>m", ":lua require('harpoon.mark').add_file()<cr>", opts)
