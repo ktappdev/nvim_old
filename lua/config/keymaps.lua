@@ -13,6 +13,8 @@ vim.keymap.set(
 )
 -- normal mode 'jj' to escape
 keymap("i", "jj", "<esc>", opts)
+
+
 -- write file with localleader + w
 keymap("n", "<localleader>w", ":wa<cr>", { noremap = true, silent = true, desc = "Write file" })
 -- quit with localleader + q
@@ -46,9 +48,13 @@ keymap("n", "<localleader>gi", ":ChatGPTEditWithInstructions<cr>", opts)
 -- map for :ChatGPTRun use two keys like local leader g and r
 keymap("n", "<localleader>gt", ":ChatGPTRun add_tests<cr>", opts)
 keymap("n", "<localleader>gc", ":ChatGPTRun complete_code<cr>", opts)
-keymap("n", "<localleader>ge", ":ChatGPTRun explain_code<cr>", opts)
+keymap("v", "<localleader>ge", ":ChatGPTRun explain_code<cr>", opts)
 keymap("n", "<localleader>gf", ":ChatGPTRun fix_bugs<cr>", opts)
 keymap("n", "<localleader>go", ":ChatGPTRun optimize_code<cr>", opts)
 keymap("n", "<localleader>gs", ":ChatGPTRun summarize<cr>", opts)
-keymap("n", "<leader>v", ":lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
-keymap("n", "<leader>m", ":lua require('harpoon.mark').add_file()<cr>", opts)
+keymap("n", "<leader>h", ":lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
+keymap("n", "<leader>a", ":lua require('harpoon.mark').add_file()<cr>", opts)
+-- clear all console.logs from file
+keymap("n", "<leader>cL", [[:%s/console\.log([^)]*);//g<CR>]], { noremap = true, silent = true })
+-- Map 'hh' to paste from yank register 0
+keymap("n", "<C-v>", '"0p', { noremap = true, silent = true })

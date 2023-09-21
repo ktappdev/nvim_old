@@ -1,11 +1,6 @@
 return {
-  { "EdenEast/nightfox.nvim", transparent = true, opts = {} },
-  { "glepnir/zephyr-nvim" },
-  { "glepnir/oceanic-material" },
-  { "glepnir/dashboard-nvim" },
   { "navarasu/onedark.nvim" },
-  { "shaunsingh/nord.nvim" },
-  { "sainnhe/sonokai" },
+  { "kjssad/quantum.vim" },
   { "sainnhe/gruvbox-material" },
   -- { "sainnhe/edge" },
   { "sainnhe/everforest" },
@@ -15,37 +10,40 @@ return {
       darkplus_style = "dark",
     },
   },
-  -- {
-  --   "ellisonleao/gruvbox.nvim",
-  --
-  --   opts = {
-  --     undercurl = true,
-  --     underline = true,
-  --     bold = true,
-  --     italic = {
-  --       strings = true,
-  --       comments = true,
-  --       operators = false,
-  --       folds = true,
-  --     },
-  --     strikethrough = true,
-  --     invert_selection = false,
-  --     invert_signs = false,
-  --     invert_tabline = false,
-  --     invert_intend_guides = false,
-  --     inverse = true, -- invert background for search, diffs, statuslines and errors
-  --     contrast = "", -- can be "hard", "soft" or empty string
-  --     palette_overrides = {},
-  --     overrides = {},
-  --     dim_inactive = false,
-  --     transparent_mode = true,
-  --   },
-  -- },
+  {
+    "ellisonleao/gruvbox.nvim",
+
+    opts = {
+      undercurl = true,
+      underline = true,
+      bold = true,
+      italic = {
+        strings = true,
+        comments = true,
+        operators = false,
+        folds = true,
+      },
+      strikethrough = true,
+      invert_selection = false,
+      invert_signs = false,
+      invert_tabline = false,
+      invert_intend_guides = false,
+      inverse = true, -- invert background for search, diffs, statuslines and errors
+      contrast = "", -- can be "hard", "soft" or empty string
+      palette_overrides = {},
+      overrides = {},
+      dim_inactive = false,
+      transparent_mode = true,
+    },
+  },
   {
     "catppuccin/nvim",
     name = "catppuccin",
     lazy = false,
     opts = {
+      transparent_background = true,
+      -- transparent_mode = true,
+
       integrations = {
         alpha = true,
         cmp = true,
@@ -77,10 +75,10 @@ return {
       },
     },
   },
-  -- {
-  --   "dracula/vim",
-  --   name = "dracula",
-  -- },
+  {
+    "dracula/vim",
+    name = "dracula",
+  },
   {
     "folke/tokyonight.nvim",
     name = "tokyonight",
@@ -88,9 +86,7 @@ return {
       style = "night",
     },
   },
-  { "bluz71/vim-nightfly-colors", name = "nightfly", priority = 1000 },
-  { "rebelot/kanagawa.nvim", name = "kanagawa", priority = 1000 },
   { "EdenEast/nightfox.nvim", name = "nightfox", priority = 1000 },
-  { "folke/zen-mode.nvim", name = "zen", priority = 1000 },
   { "rose-pine/neovim", name = "rose-pine" },
+  { "dasupradyumna/midnight.nvim", lazy = false, priority = 1000 },
 }
