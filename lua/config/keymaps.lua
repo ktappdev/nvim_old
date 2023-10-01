@@ -11,9 +11,10 @@ vim.keymap.set(
   require("telescope.builtin").resume,
   { noremap = true, silent = true, desc = "Last Telescope" }
 )
--- normal mode 'jj' to escape
-keymap("i", "jj", "<esc>", opts)
 
+-- normal mode 'jj' to escape
+keymap("i", "jk", "<esc>", opts)
+keymap("i", "jj", "<esc> :wa<cr>", opts)
 
 -- write file with localleader + w
 keymap("n", "<localleader>w", ":wa<cr>", { noremap = true, silent = true, desc = "Write file" })

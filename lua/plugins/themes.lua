@@ -1,18 +1,19 @@
 return {
-  { "navarasu/onedark.nvim" },
+  -- { "navarasu/onedark.nvim", lazy = false },
+  { "AlphaTechnolog/onedarker.nvim" },
   { "kjssad/quantum.vim" },
-  { "sainnhe/gruvbox-material" },
-  -- { "sainnhe/edge" },
-  { "sainnhe/everforest" },
+  { "sainnhe/gruvbox-material", lazy = true },
+  { "sainnhe/everforest", lazy = true },
   {
     "lunarvim/darkplus.nvim",
+    lazy = false,
     opts = {
       darkplus_style = "dark",
     },
   },
   {
     "ellisonleao/gruvbox.nvim",
-
+    lazy = true,
     opts = {
       undercurl = true,
       underline = true,
@@ -76,17 +77,14 @@ return {
     },
   },
   {
-    "dracula/vim",
-    name = "dracula",
-  },
-  {
     "folke/tokyonight.nvim",
+    lazy = false,
     name = "tokyonight",
     opts = {
       style = "night",
     },
   },
-  { "EdenEast/nightfox.nvim", name = "nightfox", priority = 1000 },
+  { "EdenEast/nightfox.nvim", lazy = true, name = "nightfox", priority = 1000 },
   { "rose-pine/neovim", name = "rose-pine" },
-  { "dasupradyumna/midnight.nvim", lazy = false, priority = 1000 },
+  { "dasupradyumna/midnight.nvim", lazy = true, priority = 1000 },
 }
