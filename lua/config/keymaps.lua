@@ -28,12 +28,15 @@ keymap("n", "<localleader>b", ":BufferLinePick<cr>", opts)
 keymap("n", "<C-s>", ":w<cr>", opts)
 -- open :Explorer with <localleader-e>
 keymap("n", "<localleader>e", ":Explore<cr>", opts)
--- disable arroe keys
+-- disable arrow keys
 keymap("n", "<up>", "", opts)
 keymap("n", "<down>", "", opts)
 keymap("n", "<left>", "", opts)
 keymap("n", "<right>", "", opts)
 -- highlight lines then move them up or down with  or K or J :move '< or '> or :move '<-1 or '>+1
+-- move a line up or down with K or J
+-- highlight lines then move them up or down with  or K or J :move '< or '> or :move '<-1 or '>+1
+
 -- Resize window using <ctrl> arrow keys
 keymap("n", "<C-Up>", ":resize -2<cr>", opts)
 keymap("n", "<C-Down>", ":resize +2<cr>", opts)
