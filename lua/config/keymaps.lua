@@ -60,5 +60,12 @@ keymap("n", "<leader>h", ":lua require('harpoon.ui').toggle_quick_menu()<cr>", o
 keymap("n", "<leader>a", ":lua require('harpoon.mark').add_file()<cr>", opts)
 -- clear all console.logs from file
 keymap("n", "<leader>cL", [[:%s/console\.log([^)]*);//g<CR>]], { noremap = true, silent = true })
+keymap("n", "<leader>ct", ":TailwindSort<CR>", { noremap = true, silent = true, desc = "Tailwind Sort" })
+keymap(
+  "n",
+  "<leader>cx",
+  ":TailwindSortOnSaveToggle<CR>",
+  { noremap = true, silent = true, desc = "Tailwind Sort on save toggle" }
+)
 -- Map 'hh' to paste from yank register 0
 keymap("n", "<C-v>", '"0p', { noremap = true, silent = true })
