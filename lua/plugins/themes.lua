@@ -4,6 +4,7 @@ return {
   { "kjssad/quantum.vim" },
   { "sainnhe/gruvbox-material", lazy = true },
   { "sainnhe/everforest", lazy = true },
+  { "marko-cerovac/material.nvim" },
   {
     "lunarvim/darkplus.nvim",
     lazy = false,
@@ -42,7 +43,7 @@ return {
     name = "catppuccin",
     lazy = false,
     opts = {
-      transparent_background = true,
+      transparent_background = false,
       -- transparent_mode = true,
 
       integrations = {
