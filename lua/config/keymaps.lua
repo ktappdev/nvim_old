@@ -69,3 +69,4 @@ keymap(
 )
 -- Map 'hh' to paste from yank register 0
 keymap("n", "<C-v>", '"0p', { noremap = true, silent = true })
+keymap("n", "<leader>n", ":NnnPicker<cr>", opts)

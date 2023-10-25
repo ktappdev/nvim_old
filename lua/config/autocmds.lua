@@ -2,4 +2,4 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 -- vim.cmd("colorscheme catppuccin-mocha")
--- vim.cmd("set clipboard=unnamedplus")
+vim.cmd("set clipboard^=unnamed,unnamedplus")
