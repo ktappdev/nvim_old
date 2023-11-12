@@ -78,4 +78,5 @@ return {
     end,
   },
   { "ofirgall/ofirkai.nvim", branch = "exp" },
+  -- { "sainttttt/flesh-and-blood" },
 }
