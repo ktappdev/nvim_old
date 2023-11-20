@@ -79,4 +79,5 @@ return {
   },
   { "ofirgall/ofirkai.nvim", branch = "exp" },
   -- { "sainttttt/flesh-and-blood" },
+  { "lunarvim/synthwave84.nvim" },
 }
