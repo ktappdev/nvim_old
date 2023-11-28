@@ -56,7 +56,7 @@ return {
     name = "tokyonight",
     opts = {
       style = "night",
-      -- transparent_background = true,
+      transparent_background = true,
       transparent_mode = true,
     },
   },
@@ -74,10 +74,25 @@ return {
   {
     "loctvl842/monokai-pro.nvim",
     config = function()
-      require("monokai-pro").setup()
+      require("monokai-pro").setup({
+        transparent_background = true,
+        transparent_mode = true,
+        -- background_clear = {
+        --   -- "float_win",
+        --   "toggleterm",
+        --   "telescope",
+        --   -- "which-key",
+        --   "renamer",
+        --   "notify",
+        --   "nvim-tree",
+        --   -- "neo-tree",
+        --   "bufferline", -- better used if background of `neo-tree` or `nvim-tree` is cleared
+        -- },
+      })
     end,
   },
   { "ofirgall/ofirkai.nvim", branch = "exp" },
   -- { "sainttttt/flesh-and-blood" },
   { "lunarvim/synthwave84.nvim" },
+  { "matsuuu/pinkmare" },
 }
