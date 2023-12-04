@@ -3,3 +3,4 @@
 -- Add any additional autocmds here
 vim.cmd("colorscheme synthwave84")
 vim.cmd("set clipboard^=unnamed,unnamedplus")
+vim.cmd("TwilightEnable")
