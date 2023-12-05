@@ -95,4 +95,5 @@ return {
   -- { "sainttttt/flesh-and-blood" },
   { "lunarvim/synthwave84.nvim" },
   { "matsuuu/pinkmare" },
+  { "RRethy/nvim-base16" },
 }
