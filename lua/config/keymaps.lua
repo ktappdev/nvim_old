@@ -4,6 +4,11 @@
 local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 -- vim.g.maplocalleader("\\")
+local harpoon = require("harpoon")
+
+-- REQUIRED
+harpoon:setup()
+-- REQUIRED
 
 vim.keymap.set(
   "n",
@@ -56,8 +61,15 @@ keymap("v", "<localleader>ge", ":ChatGPTRun explain_code<cr>", opts)
 keymap("n", "<localleader>gf", ":ChatGPTRun fix_bugs<cr>", opts)
 keymap("n", "<localleader>go", ":ChatGPTRun optimize_code<cr>", opts)
 keymap("n", "<localleader>gs", ":ChatGPTRun summarize<cr>", opts)
-keymap("n", "<leader>h", ":lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
-keymap("n", "<leader>a", ":lua require('harpoon.mark').add_file()<cr>", opts)
+-- Harpoon
+-- keymap("n", "<leader>h", ":lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
+-- keymap("n", "<leader>a", ":lua require('harpoon.mark').add_file()<cr>", opts)
+vim.keymap.set("n", "<leader>a", function()
+  harpoon:list():append()
+end)
+vim.keymap.set("n", "<leader>h", function()
+  harpoon.ui:toggle_quick_menu(harpoon:list())
+end)
 -- clear all console.logs from file
 keymap("n", "<leader>cL", [[:%s/console\.log([^)]*);//g<CR>]], { noremap = true, silent = true })
 keymap("n", "<leader>ct", ":TailwindSort<CR>", { noremap = true, silent = true, desc = "Tailwind Sort" })
@@ -68,7 +80,7 @@ keymap(
   { noremap = true, silent = true, desc = "Tailwind Sort on save toggle" }
 )
 -- Map 'hh' to paste from yank register 0
-keymap("n", "<C-v>", '"0p', { noremap = true, silent = true })
+-- keymap("n", "<localleader>d", '"_dd', { noremap = true, silent = true }) -- "_dw  -- in visual mode "_d
 keymap("n", "<leader>n", ":NnnPicker<cr>", opts)
 
 -- Open compiler

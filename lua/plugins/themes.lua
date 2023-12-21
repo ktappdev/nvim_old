@@ -1,14 +1,15 @@
 return {
   -- { "navarasu/onedark.nvim", lazy = false },
-  { "AlphaTechnolog/onedarker.nvim" },
-  { "kjssad/quantum.vim" },
-  { "sainnhe/everforest", lazy = true },
-  { "marko-cerovac/material.nvim" },
+  -- { "AlphaTechnolog/onedarker.nvim" },
+  -- { "kjssad/quantum.vim" },
+  -- { "sainnhe/everforest", lazy = true },
+  -- { "marko-cerovac/material.nvim" },
   {
     "lunarvim/darkplus.nvim",
     lazy = false,
     opts = {
       darkplus_style = "dark",
+      transparent_background = true,
     },
   },
   {
@@ -54,23 +55,24 @@ return {
     "folke/tokyonight.nvim",
     lazy = false,
     name = "tokyonight",
+    transparent = true,
     opts = {
-      style = "night",
-      transparent_background = true,
-      transparent_mode = true,
+      -- style = "night",
+      -- sidebars = "transparent",
+      -- floats = "dark",
     },
   },
-  { "EdenEast/nightfox.nvim", lazy = true, name = "nightfox", priority = 1000 },
-  { "rose-pine/neovim", name = "rose-pine" },
-  { "dasupradyumna/midnight.nvim", lazy = true, priority = 1000 },
-  { "shaunsingh/nord.nvim", lazy = true, priority = 1000 },
-  { "sainnhe/edge", lazy = true },
-  {
-    "sainnhe/gruvbox-material",
-    name = "gruvbox-material-s",
-    lazy = false,
-    priority = 1000,
-  },
+  -- { "EdenEast/nightfox.nvim", lazy = true, name = "nightfox", priority = 1000 },
+  -- { "rose-pine/neovim", name = "rose-pine" },
+  -- { "dasupradyumna/midnight.nvim", lazy = true, priority = 1000 },
+  -- { "shaunsingh/nord.nvim", lazy = true, priority = 1000 },
+  -- { "sainnhe/edge", lazy = true },
+  -- {
+  --   "sainnhe/gruvbox-material",
+  --   name = "gruvbox-material-s",
+  --   lazy = false,
+  --   priority = 1000,
+  -- },
   {
     "loctvl842/monokai-pro.nvim",
     config = function()
@@ -91,9 +93,9 @@ return {
       })
     end,
   },
-  { "ofirgall/ofirkai.nvim", branch = "exp" },
+  -- { "ofirgall/ofirkai.nvim", branch = "exp" },
   -- { "sainttttt/flesh-and-blood" },
   { "lunarvim/synthwave84.nvim" },
   { "matsuuu/pinkmare" },
-  { "RRethy/nvim-base16" },
+  -- { "RRethy/nvim-base16" },
 }
