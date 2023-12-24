@@ -9,7 +9,6 @@ return {
     lazy = false,
     opts = {
       darkplus_style = "dark",
-      transparent_background = true,
     },
   },
   {
@@ -56,11 +55,13 @@ return {
     lazy = false,
     name = "tokyonight",
     transparent = true,
-    opts = {
-      -- style = "night",
-      -- sidebars = "transparent",
-      -- floats = "dark",
-    },
+    require("tokyonight").setup({
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    }),
   },
   -- { "EdenEast/nightfox.nvim", lazy = true, name = "nightfox", priority = 1000 },
   -- { "rose-pine/neovim", name = "rose-pine" },
@@ -94,7 +95,7 @@ return {
     end,
   },
   -- { "ofirgall/ofirkai.nvim", branch = "exp" },
-  -- { "sainttttt/flesh-and-blood" },
+  { "sainttttt/flesh-and-blood" },
   { "lunarvim/synthwave84.nvim" },
   { "matsuuu/pinkmare" },
   -- { "RRethy/nvim-base16" },
