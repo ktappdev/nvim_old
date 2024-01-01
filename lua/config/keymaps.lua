@@ -82,6 +82,23 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap("n", "<leader>z", "<cmd>ZenMode<cr>", { noremap = true, silent = true })
 
 -- Toggleterm keymaps
--- vim.api.nvim_set_keymap("n", "<leader>tt", ":ToggleTerm<cr>", { noremap = true, silent = true })
--- vim.api.nvim_set_keymap("n", "<leader>ta", ":ToggleTermToggleAll<cr>", { noremap = true, silent = true })
--- vim.api.nvim_set_keymap("n", "<leader>tn", ":ToggleTermSetName<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>th",
+  ":ToggleTerm direction=horizontal<cr>",
+  { noremap = true, silent = true, desc = "Horivontal terminal" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>tv",
+  ":ToggleTerm direction=vertical size=60<cr>",
+  { noremap = true, silent = true, desc = "Vertical terminal" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>tf",
+  ":ToggleTerm direction=float<cr>",
+  { noremap = true, silent = true, desc = "Floating terminal" }
+)
+vim.api.nvim_set_keymap("n", "<leader>ta", ":ToggleTermToggleAll<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>tn", ":ToggleTermSetName<cr>", { noremap = true, silent = true })
