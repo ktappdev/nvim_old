@@ -94,3 +94,8 @@ vim.api.nvim_set_keymap(
 
 -- Zen Mode
 vim.api.nvim_set_keymap("n", "<leader>z", "<cmd>ZenMode<cr>", { noremap = true, silent = true })
+
+-- Toggleterm keymaps
+vim.api.nvim_set_keymap("n", "<leader>tt", ":ToggleTerm<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>ta", ":ToggleTermToggleAll<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>tn", ":ToggleTermSetName<cr>", { noremap = true, silent = true })
