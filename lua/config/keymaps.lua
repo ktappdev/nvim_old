@@ -97,3 +97,6 @@ vim.api.nvim_set_keymap(
 
 -- Toggle compiler results
 vim.api.nvim_set_keymap("n", "<S-F7>", "<cmd>CompilerToggleResults<cr>", { noremap = true, silent = true })
+
+-- Zen Mode
+vim.api.nvim_set_keymap("n", "<leader>z", "<cmd>ZenMode<cr>", { noremap = true, silent = true })
