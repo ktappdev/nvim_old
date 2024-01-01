@@ -66,10 +66,10 @@ keymap("n", "<localleader>gs", ":ChatGPTRun summarize<cr>", opts)
 -- keymap("n", "<leader>a", ":lua require('harpoon.mark').add_file()<cr>", opts)
 vim.keymap.set("n", "<leader>a", function()
   harpoon:list():append()
-end)
+end, { noremap = true, silent = true, desc = "Add file to Harpoon" })
 vim.keymap.set("n", "<leader>h", function()
   harpoon.ui:toggle_quick_menu(harpoon:list())
-end)
+end, { noremap = true, silent = true, desc = "Show Harpoon list" })
 -- clear all console.logs from file
 keymap("n", "<leader>cL", [[:%s/console\.log([^)]*);//g<CR>]], { noremap = true, silent = true })
 keymap("n", "<leader>ct", ":TailwindSort<CR>", { noremap = true, silent = true, desc = "Tailwind Sort" })
@@ -83,9 +83,6 @@ keymap(
 -- keymap("n", "<localleader>d", '"_dd', { noremap = true, silent = true }) -- "_dw  -- in visual mode "_d
 keymap("n", "<leader>n", ":NnnPicker<cr>", opts)
 
--- Open compiler
-vim.api.nvim_set_keymap("n", "<F6>", "<cmd>CompilerOpen<cr>", { noremap = true, silent = true })
-
 -- Redo last selected option
 vim.api.nvim_set_keymap(
   "n",
@@ -94,9 +91,6 @@ vim.api.nvim_set_keymap(
     .. "<cmd>CompilerRedo<cr>",
   { noremap = true, silent = true }
 )
-
--- Toggle compiler results
-vim.api.nvim_set_keymap("n", "<S-F7>", "<cmd>CompilerToggleResults<cr>", { noremap = true, silent = true })
 
 -- Zen Mode
 vim.api.nvim_set_keymap("n", "<leader>z", "<cmd>ZenMode<cr>", { noremap = true, silent = true })
