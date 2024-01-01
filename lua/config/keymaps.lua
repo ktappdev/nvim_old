@@ -9,6 +9,16 @@ local harpoon = require("harpoon")
 -- REQUIRED
 harpoon:setup()
 -- REQUIRED
+require("toggleterm").setup({ -- size can be a number or function which is passed the current terminal
+  function(term)
+    if term.direction == "horizontal" then
+      return 15
+    elseif term.direction == "vertical" then
+      return vim.o.columns * 0.4
+    end
+  end,
+  open_mapping = [[<c-\>]],
+})
 
 vim.keymap.set(
   "n",
@@ -22,48 +32,24 @@ keymap("i", "jk", "<esc>", opts)
 keymap("i", "jj", "<esc> :wa<cr>", opts)
 
 -- write file with localleader + w
-keymap("n", "<localleader>w", ":wa<cr>", { noremap = true, silent = true, desc = "Write file" })
+keymap("n", "<localleader>w", ":wa<cr>", { noremap = true, silent = true, desc = "Write all files" })
 -- quit with localleader + q
 keymap("n", "<localleader>q", ":q<cr>", { noremap = true, silent = true, desc = "Quit all" })
 -- close buffer with localleader + x
 keymap("n", "<localleader>x", ":bd<cr>", { noremap = true, silent = true, desc = "Close Buffer" })
---localleader + b for bufferlinepick
-keymap("n", "<localleader>b", ":BufferLinePick<cr>", opts)
 -- save file with <C-s>
-keymap("n", "<C-s>", ":w<cr>", opts)
--- open :Explorer with <localleader-e>
-keymap("n", "<localleader>e", ":Explore<cr>", opts)
+keymap("n", "<C-s>", ":wa<cr>", opts)
 -- disable arrow keys
 keymap("n", "<up>", "", opts)
 keymap("n", "<down>", "", opts)
 keymap("n", "<left>", "", opts)
 keymap("n", "<right>", "", opts)
--- highlight lines then move them up or down with  or K or J :move '< or '> or :move '<-1 or '>+1
--- move a line up or down with K or J
--- highlight lines then move them up or down with  or K or J :move '< or '> or :move '<-1 or '>+1
-
 -- Resize window using <ctrl> arrow keys
 keymap("n", "<C-Up>", ":resize -2<cr>", opts)
 keymap("n", "<C-Down>", ":resize +2<cr>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<cr>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<cr>", opts)
--- keymaps for ChatGPT plugin
--- map key for :ChatGPT add proper description
-keymap("n", "<localleader>gg", ":ChatGPT<cr>", opts)
--- map for :ChatGPTCompleteCode
-keymap("n", "<localleader>gc", ":ChatGPTCompleteCode<cr>", opts)
--- map for :ChatGPTEditWithInstructions
-keymap("n", "<localleader>gi", ":ChatGPTEditWithInstructions<cr>", opts)
--- map for :ChatGPTRun use two keys like local leader g and r
-keymap("n", "<localleader>gt", ":ChatGPTRun add_tests<cr>", opts)
-keymap("n", "<localleader>gc", ":ChatGPTRun complete_code<cr>", opts)
-keymap("v", "<localleader>ge", ":ChatGPTRun explain_code<cr>", opts)
-keymap("n", "<localleader>gf", ":ChatGPTRun fix_bugs<cr>", opts)
-keymap("n", "<localleader>go", ":ChatGPTRun optimize_code<cr>", opts)
-keymap("n", "<localleader>gs", ":ChatGPTRun summarize<cr>", opts)
 -- Harpoon
--- keymap("n", "<leader>h", ":lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
--- keymap("n", "<leader>a", ":lua require('harpoon.mark').add_file()<cr>", opts)
 vim.keymap.set("n", "<leader>a", function()
   harpoon:list():append()
 end, { noremap = true, silent = true, desc = "Add file to Harpoon" })
@@ -96,6 +82,6 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap("n", "<leader>z", "<cmd>ZenMode<cr>", { noremap = true, silent = true })
 
 -- Toggleterm keymaps
-vim.api.nvim_set_keymap("n", "<leader>tt", ":ToggleTerm<cr>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>ta", ":ToggleTermToggleAll<cr>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>tn", ":ToggleTermSetName<cr>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<leader>tt", ":ToggleTerm<cr>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<leader>ta", ":ToggleTermToggleAll<cr>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<leader>tn", ":ToggleTermSetName<cr>", { noremap = true, silent = true })
