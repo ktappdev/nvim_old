@@ -81,7 +81,7 @@ keymap("n", "<leader>z", "<cmd>ZenMode<cr>", { noremap = true, silent = true })
 keymap(
   "n",
   "<leader>th",
-  ":ToggleTerm direction=horizontal size=60<cr>",
+  ":ToggleTerm direction=horizontal<cr>",
   { noremap = true, silent = true, desc = "Horivontal terminal" }
 )
 keymap(
