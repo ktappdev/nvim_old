@@ -5,17 +5,7 @@ local harpoon = require("harpoon")
 -- REQUIRED
 harpoon:setup({})
 -- REQUIRED
---
-require("toggleterm").setup({ -- size can be a number or function which is passed the current terminal
-  function(term)
-    if term.direction == "horizontal" then
-      return 15
-    elseif term.direction == "vertical" then
-      return vim.o.columns * 0.4
-    end
-  end,
-  open_mapping = [[<c-\>]],
-})
+
 
 keymap(
   "n",
@@ -48,13 +38,9 @@ keymap("n", "<C-Left>", ":vertical resize -2<cr>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<cr>", opts)
 
 -- Harpoon
-keymap("n", "<leader>a", function()
-  harpoon:list():append()
-end, { noremap = true, silent = true, desc = "Add file to Harpoon" })
+keymap("n", "<leader>a", function() harpoon:list():append() end)
 
-keymap("n", "<leader>h", function()
-  harpoon.ui:toggle_quick_menu(harpoon:list())
-end, { noremap = true, silent = true, desc = "Show Harpoon list" })
+keymap("n", "<leader>h", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
 -- clear all console.logs from file
 keymap(
@@ -76,25 +62,3 @@ keymap("n", "<leader>n", ":NnnPicker<cr>", opts)
 
 -- Zen Mode
 keymap("n", "<leader>z", "<cmd>ZenMode<cr>", { noremap = true, silent = true })
-
--- Toggleterm keymaps
-keymap(
-  "n",
-  "<leader>th",
-  ":ToggleTerm direction=horizontal<cr>",
-  { noremap = true, silent = true, desc = "Horivontal terminal" }
-)
-keymap(
-  "n",
-  "<leader>tv",
-  ":ToggleTerm direction=vertical size=60<cr>",
-  { noremap = true, silent = true, desc = "Vertical terminal" }
-)
-keymap(
-  "n",
-  "<leader>tf",
-  ":ToggleTerm direction=float<cr>",
-  { noremap = true, silent = true, desc = "Floating terminal" }
-)
-keymap("n", "<leader>ta", ":ToggleTermToggleAll<cr>", { noremap = true, silent = true })
-keymap("n", "<leader>tn", ":ToggleTermSetName<cr>", { noremap = true, silent = true })
