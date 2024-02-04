@@ -3,7 +3,23 @@ return {
   -- { "AlphaTechnolog/onedarker.nvim" },
   -- { "kjssad/quantum.vim" },
   -- { "sainnhe/everforest", lazy = true },
-  -- { "marko-cerovac/material.nvim" },
+  {
+    'olivercederborg/poimandres.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('poimandres').setup {
+        -- leave this setup function empty for default config
+        -- or refer to the configuration section
+        -- for configuration options
+      }
+    end,
+
+    -- optionally set the colorscheme within lazy config
+    init = function()
+      vim.cmd("colorscheme poimandres")
+    end
+  },
   {
     "lunarvim/darkplus.nvim",
     lazy = false,
@@ -64,7 +80,7 @@ return {
     }),
   },
   -- { "EdenEast/nightfox.nvim", lazy = true, name = "nightfox", priority = 1000 },
-  -- { "rose-pine/neovim", name = "rose-pine" },
+  { "rose-pine/neovim",         name = "rose-pine" },
   -- { "dasupradyumna/midnight.nvim", lazy = true, priority = 1000 },
   -- { "shaunsingh/nord.nvim", lazy = true, priority = 1000 },
   -- { "sainnhe/edge", lazy = true },

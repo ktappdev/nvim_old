@@ -1,7 +1,8 @@
 local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 local harpoon = require("harpoon")
-
+-- local apm = require("vim-apm")
+-- apm:setup({})
 -- REQUIRED
 harpoon:setup({})
 -- REQUIRED
@@ -13,7 +14,7 @@ keymap(
   require("telescope.builtin").resume,
   { noremap = true, silent = true, desc = "Last Telescope" }
 )
-
+keymap("n", "<leader>apm", function() apm:toggle_monitor() end)
 -- normal mode 'jj' to escape
 keymap("i", "jk", "<esc>", opts)
 keymap("i", "jj", "<esc> :wa<cr>", opts)
