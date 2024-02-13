@@ -7,6 +7,8 @@ return {
         "gopls",
         "typescript-language-server",
         "clangd",
+        "rust-analyzer",
+        "tailwindcss-language-server",
       },
     },
   },

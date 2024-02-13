@@ -5,7 +5,7 @@ return {
   -- { "sainnhe/everforest", lazy = true },
   {
     'olivercederborg/poimandres.nvim',
-    lazy = false,
+    lazy = true,
     priority = 1000,
     config = function()
       require('poimandres').setup {
@@ -30,10 +30,9 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    lazy = false,
+    lazy = true,
     opts = {
       transparent_background = true,
-      -- transparent_mode = true,
 
       integrations = {
         alpha = true,
@@ -79,19 +78,10 @@ return {
       },
     }),
   },
-  -- { "EdenEast/nightfox.nvim", lazy = true, name = "nightfox", priority = 1000 },
-  { "rose-pine/neovim",         name = "rose-pine" },
-  -- { "dasupradyumna/midnight.nvim", lazy = true, priority = 1000 },
-  -- { "shaunsingh/nord.nvim", lazy = true, priority = 1000 },
-  -- { "sainnhe/edge", lazy = true },
-  -- {
-  --   "sainnhe/gruvbox-material",
-  --   name = "gruvbox-material-s",
-  --   lazy = false,
-  --   priority = 1000,
-  -- },
+  { "rose-pine/neovim",          name = "rose-pine", lazy = true,    priority = 1000 },
   {
     "loctvl842/monokai-pro.nvim",
+    lazy = true,
     config = function()
       require("monokai-pro").setup({
         transparent_background = true,
@@ -111,8 +101,14 @@ return {
     end,
   },
   -- { "ofirgall/ofirkai.nvim", branch = "exp" },
-  { "sainttttt/flesh-and-blood" },
+  { "sainttttt/flesh-and-blood", lazy = true,        priority = 1000 },
   { "lunarvim/synthwave84.nvim" },
-  { "matsuuu/pinkmare" },
+  { "matsuuu/pinkmare",          lazy = true,        priority = 1000 },
   -- { "RRethy/nvim-base16" },
+  { "rebelot/kanagawa.nvim" },
+  {
+    "olimorris/onedarkpro.nvim",
+    priority = 1000, -- Ensure it loads first
+  }
+
 }

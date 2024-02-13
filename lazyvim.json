@@ -3,12 +3,6 @@
     "lazyvim.plugins.extras.coding.codeium",
     "lazyvim.plugins.extras.coding.yanky",
     "lazyvim.plugins.extras.editor.aerial",
-    "lazyvim.plugins.extras.editor.navic",
-    "lazyvim.plugins.extras.formatting.prettier",
-    "lazyvim.plugins.extras.lang.go",
-    "lazyvim.plugins.extras.lang.python",
-    "lazyvim.plugins.extras.lang.rust",
-    "lazyvim.plugins.extras.lang.tailwind",
     "lazyvim.plugins.extras.util.project"
   ],
   "news": {
