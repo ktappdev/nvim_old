@@ -39,9 +39,9 @@ keymap("n", "<C-Left>", ":vertical resize -2<cr>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<cr>", opts)
 
 -- Harpoon
-keymap("n", "<leader>a", function() harpoon:list():append() end)
+keymap("n", "<M-a>", function() harpoon:list():append() end)
 
-keymap("n", "<leader>h", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+keymap("n", "<M-h>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
 -- clear all console.logs from file
 keymap(
