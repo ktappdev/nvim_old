@@ -1,12 +1,9 @@
 local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 local harpoon = require("harpoon")
--- local apm = require("vim-apm")
--- apm:setup({})
 -- REQUIRED
 harpoon:setup({})
 -- REQUIRED
-
 
 keymap(
   "n",
@@ -14,17 +11,13 @@ keymap(
   require("telescope.builtin").resume,
   { noremap = true, silent = true, desc = "Last Telescope" }
 )
-keymap("n", "<leader>apm", function() apm:toggle_monitor() end)
 -- normal mode 'jj' to escape
 keymap("i", "jk", "<esc>", opts)
 keymap("i", "jj", "<esc> :wa<cr>", opts)
 
--- write file with localleader + w
-keymap("n", "<localleader>w", ":wa<cr>", { noremap = true, silent = true, desc = "Write all files" })
--- quit with localleader + q
-keymap("n", "<localleader>q", ":q<cr>", { noremap = true, silent = true, desc = "Quit all" })
--- close buffer with localleader + x
-keymap("n", "<localleader>x", ":bd<cr>", { noremap = true, silent = true, desc = "Close Buffer" })
+keymap("n", "<M-w>", ":wa<cr>", { noremap = true, silent = true, desc = "Write all files" })
+keymap("n", "<M-q>", ":q<cr>", { noremap = true, silent = true, desc = "Quit all" })
+keymap("n", "<M-x>", ":bd<cr>", { noremap = true, silent = true, desc = "Close Buffer" })
 -- save file with <C-s>
 keymap("n", "<C-s>", ":wa<cr>", opts)
 -- disable arrow keys
@@ -39,9 +32,13 @@ keymap("n", "<C-Left>", ":vertical resize -2<cr>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<cr>", opts)
 
 -- Harpoon
-keymap("n", "<M-a>", function() harpoon:list():append() end)
+keymap("n", "<leader>ha", function()
+  harpoon:list():append()
+end, { noremap = true, silent = true, desc = "Harpoon Add" })
 
-keymap("n", "<M-h>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+keymap("n", "<leader>hh", function()
+  harpoon.ui:toggle_quick_menu(harpoon:list())
+end, { noremap = true, silent = true, desc = "Harpoon Show" })
 
 -- clear all console.logs from file
 keymap(

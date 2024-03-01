@@ -4,21 +4,21 @@ return {
   -- { "kjssad/quantum.vim" },
   -- { "sainnhe/everforest", lazy = true },
   {
-    'olivercederborg/poimandres.nvim',
+    "olivercederborg/poimandres.nvim",
     lazy = true,
     priority = 1000,
     config = function()
-      require('poimandres').setup {
+      require("poimandres").setup({
         -- leave this setup function empty for default config
         -- or refer to the configuration section
         -- for configuration options
-      }
+      })
     end,
 
     -- optionally set the colorscheme within lazy config
     init = function()
       vim.cmd("colorscheme poimandres")
-    end
+    end,
   },
   {
     "lunarvim/darkplus.nvim",
@@ -78,7 +78,7 @@ return {
       },
     }),
   },
-  { "rose-pine/neovim",          name = "rose-pine", lazy = true,    priority = 1000 },
+  { "rose-pine/neovim", name = "rose-pine", lazy = true, priority = 1000 },
   {
     "loctvl842/monokai-pro.nvim",
     lazy = true,
@@ -101,14 +101,21 @@ return {
     end,
   },
   -- { "ofirgall/ofirkai.nvim", branch = "exp" },
-  { "sainttttt/flesh-and-blood", lazy = true,        priority = 1000 },
+  { "sainttttt/flesh-and-blood", lazy = true, priority = 1000 },
   { "lunarvim/synthwave84.nvim" },
-  { "matsuuu/pinkmare",          lazy = true,        priority = 1000 },
+  { "matsuuu/pinkmare", lazy = true, priority = 1000 },
   -- { "RRethy/nvim-base16" },
   { "rebelot/kanagawa.nvim" },
   {
     "olimorris/onedarkpro.nvim",
     priority = 1000, -- Ensure it loads first
-  }
-
+  },
+  {
+    "sontungexpt/witch",
+    priority = 1000,
+    lazy = false,
+    config = function(_, opts)
+      require("witch").setup(opts)
+    end,
+  },
 }
