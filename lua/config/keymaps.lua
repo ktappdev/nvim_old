@@ -15,9 +15,9 @@ keymap(
 keymap("i", "jk", "<esc>", opts)
 keymap("i", "jj", "<esc> :wa<cr>", opts)
 
-keymap("n", "<M-w>", ":wa<cr>", { noremap = true, silent = true, desc = "Write all files" })
-keymap("n", "<M-q>", ":q<cr>", { noremap = true, silent = true, desc = "Quit all" })
-keymap("n", "<M-x>", ":bd<cr>", { noremap = true, silent = true, desc = "Close Buffer" })
+keymap("n", "<C-w>", ":wa<cr>", { noremap = true, silent = true, desc = "Write all files" })
+keymap("n", "<C-q>", ":q<cr>", { noremap = true, silent = true, desc = "Quit all" })
+keymap("n", "<C-x>", ":bd<cr>", { noremap = true, silent = true, desc = "Close Buffer" })
 -- save file with <C-s>
 keymap("n", "<C-s>", ":wa<cr>", opts)
 -- disable arrow keys

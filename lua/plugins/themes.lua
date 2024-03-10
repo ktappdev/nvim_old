@@ -78,7 +78,6 @@ return {
       },
     }),
   },
-  { "rose-pine/neovim", name = "rose-pine", lazy = true, priority = 1000 },
   {
     "loctvl842/monokai-pro.nvim",
     lazy = true,
@@ -101,15 +100,8 @@ return {
     end,
   },
   -- { "ofirgall/ofirkai.nvim", branch = "exp" },
-  { "sainttttt/flesh-and-blood", lazy = true, priority = 1000 },
   { "lunarvim/synthwave84.nvim" },
-  { "matsuuu/pinkmare", lazy = true, priority = 1000 },
-  -- { "RRethy/nvim-base16" },
-  { "rebelot/kanagawa.nvim" },
-  {
-    "olimorris/onedarkpro.nvim",
-    priority = 1000, -- Ensure it loads first
-  },
+  { "matsuuu/pinkmare",         lazy = false, priority = 1000 },
   {
     "sontungexpt/witch",
     priority = 1000,
