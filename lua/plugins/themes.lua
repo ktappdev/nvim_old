@@ -5,7 +5,6 @@ return {
   -- { "sainnhe/everforest", lazy = true },
   {
     "olivercederborg/poimandres.nvim",
-    lazy = true,
     priority = 1000,
     config = function()
       require("poimandres").setup({
@@ -14,11 +13,11 @@ return {
         -- for configuration options
       })
     end,
+    opts = {
+      transparent_background = true,
+    }
 
-    -- optionally set the colorscheme within lazy config
-    init = function()
-      vim.cmd("colorscheme poimandres")
-    end,
+
   },
   {
     "lunarvim/darkplus.nvim",
@@ -30,7 +29,7 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    lazy = true,
+    lazy = false,
     opts = {
       transparent_background = true,
 
