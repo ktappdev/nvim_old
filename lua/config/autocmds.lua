@@ -1,6 +1,6 @@
 -- Autocmds are automatically loaded on the VeryLazy event
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
-vim.cmd("colorscheme witch")
+vim.cmd("colorscheme catppuccin")
 vim.cmd("set clipboard=unnamedplus")
 -- vim.cmd("TwilightEnable")

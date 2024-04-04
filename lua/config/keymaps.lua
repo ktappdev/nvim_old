@@ -1,8 +1,8 @@
 local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
-local harpoon = require("harpoon")
+-- local harpoon = require("harpoon")
 -- REQUIRED
-harpoon:setup({})
+-- harpoon:setup({})
 -- REQUIRED
 
 keymap(
@@ -32,13 +32,13 @@ keymap("n", "<C-Left>", ":vertical resize -2<cr>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<cr>", opts)
 
 -- Harpoon
-keymap("n", "<leader>ha", function()
-  harpoon:list():append()
-end, { noremap = true, silent = true, desc = "Harpoon Add" })
+-- keymap("n", "<leader>ha", function()
+--   harpoon:list():append()
+-- end, { noremap = true, silent = true, desc = "Harpoon Add" })
 
-keymap("n", "<leader>hh", function()
-  harpoon.ui:toggle_quick_menu(harpoon:list())
-end, { noremap = true, silent = true, desc = "Harpoon Show" })
+-- keymap("n", "<leader>hh", function()
+--   harpoon.ui:toggle_quick_menu(harpoon:list())
+-- end, { noremap = true, silent = true, desc = "Harpoon Show" })
 
 -- clear all console.logs from file
 keymap(
