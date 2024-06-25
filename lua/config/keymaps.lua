@@ -3,7 +3,8 @@ local keymap = vim.keymap.set
 -- local harpoon = require("harpoon")
 -- REQUIRED
 -- harpoon:setup({})
--- REQUIRED
+-- REQ  UIRED ghsdfghfjsdgh hjfsehfksdjfhasdjfh
+keymap("n", "<localleader>w", ":wa<cr>", { noremap = true, silent = true, desc = "Write all files" })
 
 keymap(
   "n",
@@ -20,7 +21,8 @@ keymap("n", "<C-q>", ":q<cr>", { noremap = true, silent = true, desc = "Quit all
 keymap("n", "<C-x>", ":bd<cr>", { noremap = true, silent = true, desc = "Close Buffer" })
 -- save file with <C-s>
 keymap("n", "<C-s>", ":wa<cr>", opts)
--- disable arrow keys
+-- disable arrow keysvim.lsp.buf.rename
+keymap("n", "<leader>rn", "vim.lsp.buf.rename", opts)
 keymap("n", "<up>", "", opts)
 keymap("n", "<down>", "", opts)
 keymap("n", "<left>", "", opts)
